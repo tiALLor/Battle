@@ -48,6 +48,8 @@ def deal_the_cards(deck):
 
 def turn(won_cards=PlayingDeck([])):
     try:
+        # global deck_p1
+        # global deck_p2
         card1 = deck_p1.draw_card()
         card2 = deck_p2.draw_card()
         won_cards.add_card(card1)
@@ -73,6 +75,8 @@ def turn(won_cards=PlayingDeck([])):
     
 
 def win_report():
+    # global deck_p1
+    # global deck_p2
     if deck_p1:
         sys.exit("Player1 has won!")
     elif deck_p2:
@@ -96,4 +100,20 @@ if __name__ == "__main__":
         # input("Press ENTER!")
         print()
         
+    win_report()    
+    initial_deck.shuffle_deck()
+      
+    deck_p1, deck_p2 = deal_the_cards(initial_deck)
+    print(deck_p1)
+    print(deck_p2)
+
+    while deck_p1 and deck_p2:
+        turn()
+        print()
+        print(f"Player1: {deck_p1}")
+        print(f"Player2: {deck_p2}")
+        # input("Press ENTER!")
+        print()
+        
+
     win_report()    
