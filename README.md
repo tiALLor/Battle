@@ -13,9 +13,13 @@ War/ Battle card game
 
 
 # Table of content (optional)
+not relevant
 
 # How to Install and Run the Project
+The game will be run with "python battle.py"
+Arguments: None
 
 # How to Use the Project
 
 # License
+MIT
